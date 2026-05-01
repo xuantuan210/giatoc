@@ -36,8 +36,8 @@ body {
   background: var(--bg);
   color: var(--cream);
   font-family: var(--body);
-  font-size: 17px;
-  line-height: 1.7;
+  font-size: clamp(18px, 2.2vw, 20px);
+  line-height: 1.8;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -281,7 +281,7 @@ section { padding: 5rem 0; }
 
 .value-name {
   font-family: var(--serif);
-  font-size: 1.45rem;
+  font-size: clamp(1.4rem, 3vw, 1.6rem);
   font-weight: 400;
   color: var(--cream);
   margin-bottom: 2px;
@@ -289,7 +289,7 @@ section { padding: 5rem 0; }
 }
 
 .value-eng {
-  font-size: 10px;
+  font-size: clamp(11px, 1.5vw, 12px);
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--muted);
@@ -304,23 +304,23 @@ section { padding: 5rem 0; }
 
 .value-desc {
   font-family: var(--serif);
-  font-size: 0.95rem;
+  font-size: clamp(1rem, 2vw, 1.05rem);
   font-style: italic;
   color: var(--cream2);
-  line-height: 1.7;
+  line-height: 1.75;
   margin-bottom: 1rem;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .value-behaviors { list-style: none; }
 .value-behaviors li {
-  font-size: 0.9rem;
+  font-size: clamp(0.98rem, 2vw, 1rem);
   color: var(--cream2);
   padding-left: 1.1rem;
   position: relative;
-  margin-bottom: 0.4rem;
-  line-height: 1.6;
-  opacity: 0.75;
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+  opacity: 0.8;
 }
 .value-behaviors li::before {
   content: '—';
@@ -397,18 +397,18 @@ section { padding: 5rem 0; }
 
 .ritual-name {
   font-family: var(--serif);
-  font-size: 1.05rem;
+  font-size: clamp(1.1rem, 2.5vw, 1.2rem);
   font-weight: 500;
   color: var(--cream);
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
   letter-spacing: 0.02em;
 }
 
 .ritual-desc {
-  font-size: 0.9rem;
+  font-size: clamp(0.95rem, 2vw, 1rem);
   color: var(--cream2);
-  opacity: 0.7;
-  line-height: 1.65;
+  opacity: 0.75;
+  line-height: 1.75;
 }
 
 /* ───── FUND ───── */
@@ -442,16 +442,16 @@ section { padding: 5rem 0; }
   display: flex;
   gap: 1rem;
   align-items: baseline;
-  font-size: 0.95rem;
+  font-size: clamp(1rem, 2vw, 1.05rem);
   color: var(--cream2);
-  opacity: 0.8;
-  line-height: 1.6;
+  opacity: 0.85;
+  line-height: 1.7;
 }
 .fund-rule::before {
   content: '→';
   color: var(--green-l);
   flex-shrink: 0;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
 }
 
 /* ───── ACTION CODE ───── */
@@ -512,10 +512,24 @@ footer {
 
 /* ───── RESPONSIVE ───── */
 @media (max-width: 640px) {
+  body { font-size: 18px; }
   .values-grid { grid-template-columns: 1fr; }
+  .value-card { padding: 1.6rem 1.4rem; }
+  .value-name { font-size: 1.5rem; }
+  .value-desc { font-size: 1.05rem; }
+  .value-behaviors li { font-size: 1rem; line-height: 1.75; }
+  .value-bridge { font-size: 0.95rem; }
+  .value-num { font-size: 2.8rem; }
   .fund-box { padding: 1.75rem; }
-  .ritual-item { grid-template-columns: 36px 1fr; padding: 1rem; }
-  .ritual-icon { width: 36px; height: 36px; font-size: 1rem; }
+  .fund-rule { font-size: 1.05rem; }
+  .ritual-item { grid-template-columns: 40px 1fr; padding: 1.1rem; gap: 1rem; }
+  .ritual-icon { width: 40px; height: 40px; font-size: 1.1rem; }
+  .ritual-name { font-size: 1.15rem; }
+  .ritual-desc { font-size: 1rem; }
+  .ritual-freq { font-size: 12px; }
+  .code-rules li { font-size: 1.15rem; }
+  .mission-hero { font-size: 1.15rem; }
+  .section-title { font-size: 2rem; }
 }
 </style>
 </head>
